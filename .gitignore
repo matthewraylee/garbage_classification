@@ -2,6 +2,6 @@
 
 # Ignore everything inside data/raw
 
-garbage-classification/data/raw/*
+garbage-classification/garbage-classification/data/raw/*
 
 !data/raw/.gitkeep
