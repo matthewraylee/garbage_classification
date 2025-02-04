@@ -1,0 +1,7 @@
+.DS_Store
+
+# Ignore everything inside data/raw
+
+garbage-classification/data/raw/*
+
+!data/raw/.gitkeep
