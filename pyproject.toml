@@ -1,0 +1,22 @@
+[project]
+name = "garbage-classification"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Matthew Ray Lee",email = "matthewraylee@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tensorflow (>=2.18.0,<3.0.0)",
+    "ultralytics (>=8.3.70,<9.0.0)",
+    "kaggle (>=1.6.17,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+download-data = "garbage_classification.download_data:main"

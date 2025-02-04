@@ -2,7 +2,7 @@
 
 # Ignore everything inside data/raw
 
-garbage-classification/garbage-classification/data/raw/*
+garbage-classification/data/raw/*
 *.jpg
 
-!data/raw/.gitkeep
+!garbage-classification/data/raw/.gitkeep
