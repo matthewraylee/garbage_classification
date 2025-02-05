@@ -10,7 +10,8 @@ requires-python = ">=3.12"
 dependencies = [
     "tensorflow (>=2.18.0,<3.0.0)",
     "ultralytics (>=8.3.70,<9.0.0)",
-    "kaggle (>=1.6.17,<2.0.0)"
+    "kaggle (>=1.6.17,<2.0.0)",
+    "gradio (>=5.15.0,<6.0.0)"
 ]
 
 
