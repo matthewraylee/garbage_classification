@@ -4,12 +4,12 @@ from torchvision import transforms
 import gradio as gr
 from ultralytics import YOLO
 
-# # Load pre-trained ResNet model
-# model = torchvision.models.resnet50(pretrained=True)
-# model.eval()
+# Load pre-trained ResNet model
+model = torchvision.models.resnet50(pretrained=True)
+model.eval()
 
 # Load Yolo
-model = YOLO("yolov8n.pt")  # Using a pre-trained small model as the base
+# model = YOLO("yolov8n.pt")  # Using a pre-trained small model as the base
 
 # ImageNet class labels
 import requests
