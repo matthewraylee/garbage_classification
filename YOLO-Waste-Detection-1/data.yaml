@@ -1,0 +1,56 @@
+names:
+  - Aerosols
+  - Aluminum can
+  - Aluminum caps
+  - Cardboard
+  - Cellulose
+  - Ceramic
+  - Combined plastic
+  - Container for household chemicals
+  - Disposable tableware
+  - Electronics
+  - Foil
+  - Furniture
+  - Glass bottle
+  - Iron utensils
+  - Liquid
+  - Metal shavings
+  - Milk bottle
+  - Organic
+  - Paper bag
+  - Paper cups
+  - Paper shavings
+  - Paper
+  - Papier mache
+  - Plastic bag
+  - Plastic bottle
+  - Plastic can
+  - Plastic canister
+  - Plastic caps
+  - Plastic cup
+  - Plastic shaker
+  - Plastic shavings
+  - Plastic toys
+  - Postal packaging
+  - Printing industry
+  - Scrap metal
+  - Stretch film
+  - Tetra pack
+  - Textile
+  - Tin
+  - Unknown plastic
+  - Wood
+  - Zip plastic bag
+nc: 42
+roboflow:
+  license: CC BY 4.0
+  project: yolo-waste-detection
+  url: https://universe.roboflow.com/projectverba/yolo-waste-detection/dataset/1
+  version: 1
+  workspace: projectverba
+# test: ../test/images
+# train: ../train/images
+# val: ../valid/images
+train: /Users/mrlee/development/garbage_classification/YOLO-Waste-Detection-1/train/images
+val: /Users/mrlee/development/garbage_classification/YOLO-Waste-Detection-1/valid/images
+test: /Users/mrlee/development/garbage_classification/YOLO-Waste-Detection-1/test/images
