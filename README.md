@@ -15,3 +15,6 @@ To run the app, use the following command:
 ```
 streamlit run app.py
 ```
+
+conda activate yolov8_env
+conda deactivate
