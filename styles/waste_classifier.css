@@ -1,0 +1,235 @@
+.webcam-input {
+  height: 550px !important;
+}
+.webcam-input button {
+  z-index: 1000 !important;
+  position: relative !important;
+}
+/* Main color variables */
+:root {
+  --compost-color: rgb(0, 180, 0);
+  --recyclable-color: rgb(0, 0, 255);
+  --garbage-color: rgb(255, 0, 0);
+  --background-light: #f9f9f9;
+  --border-color: #ddd;
+  --text-color: #333;
+}
+
+/* Container and general layout */
+.container {
+  max-width: 1200px !important;
+  margin: auto;
+  padding: 20px;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Legend styling */
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+
+.compost-color {
+  background-color: var(--compost-color);
+}
+.recyclable-color {
+  background-color: var(--recyclable-color);
+}
+.garbage-color {
+  background-color: var(--garbage-color);
+}
+
+/* Webcam container and controls */
+.left-column {
+  height: 550px !important; /* Allow extra space for webcam controls */
+  min-height: 550px !important;
+}
+
+.webcam-title,
+.results-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Fix for webcam controls */
+.webcam-input {
+  position: relative !important;
+  min-height: 480px !important;
+  max-height: 480px !important;
+}
+
+/* This is crucial for showing the webcam controls */
+.webcam-input > div {
+  min-height: 480px !important;
+}
+
+/* Ensure the webcam controls are accessible */
+.webcam-input button {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  padding: 8px 16px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+}
+
+.webcam-input button:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Results styling */
+.results-output {
+  height: 480px !important;
+  overflow-y: auto !important;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.results-container {
+  padding: 15px;
+}
+
+.summary-section {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.category-count {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.category-compost {
+  background-color: var(--compost-color);
+  border: 2px solid var(--compost-color);
+}
+
+.category-recyclable {
+  background-color: var(--recyclable-color);
+  border: 2px solid var(--recyclable-color);
+}
+
+.category-garbage {
+  background-color: var(--garbage-color);
+  border: 2px solid var(--garbage-color);
+}
+
+/* Detected item styling */
+.detection-item {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detection-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.category-compost .detection-header {
+  background-color: var(--compost-color);
+}
+
+.category-recyclable .detection-header {
+  background-color: var(--recyclable-color);
+}
+
+.category-garbage .detection-header {
+  background-color: var(--garbage-color);
+}
+
+.item-number {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.item-label {
+  flex-grow: 1;
+}
+
+.item-category {
+  margin: 0 10px;
+  padding: 2px 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.item-confidence {
+  font-size: 0.9em;
+}
+
+.detection-reasoning {
+  padding: 10px 12px;
+  background-color: var(--background-light);
+  color: var(--text-color);
+}
+
+/* How it works section */
+.how-it-works {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 10px;
+}
+
+/* Message for no detections */
+.no-detections {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
