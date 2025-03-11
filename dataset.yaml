@@ -1,12 +1,9 @@
-path: /Users/mrlee/development/garbage_classification/garbage_classification/data/raw/ # Absolute path to dataset
-train: one-indexed-files-notrash_train.txt # Training split file
-val: one-indexed-files-notrash_val.txt # Validation split file
-test: one-indexed-files-notrash_test.txt # Test split file (optional)
+# dataset.yaml
 
-nc: 6 # Number of classes
-names: ["cardboard", "glass", "metal", "paper", "plastic", "trash"] # Class names
+path: /Users/mrlee/development/garbage_classification/garbage_classification/data/raw/
+train: Garbage classification # This should be the folder containing training images
+val: Garbage classification # If using the same for validation
+test: Garbage classification # If using the same for testing
 
-# Ensure YOLO understands the dataset structure
-train_dir: Garbage classification # Folder containing training images
-val_dir: Garbage classification # Folder containing validation images
-test_dir: Garbage classification # Folder containing test images
+nc: 6 # Number of classes (glass, paper, metal, etc.)
+names: ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
