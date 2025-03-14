@@ -352,4 +352,5 @@ if __name__ == "__main__":
         print(f"CSS file not found at: {css_path}")
     
     demo = create_ui()
-    demo.launch()
+    # demo.launch()
+    demo.launch(share=True)

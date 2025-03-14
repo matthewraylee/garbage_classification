@@ -29,3 +29,7 @@ yolo task=detect mode=train model=yolov8n.pt data=datasets/data.yaml epochs=50 b
 # test model
 
 yolo task=detect mode=val model=runs/detect/train10/weights/best.pt data=datasets/data.yaml
+
+# run web application
+
+python garbage_classification/waste_classification_webcam.py
