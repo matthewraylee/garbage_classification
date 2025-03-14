@@ -10,7 +10,7 @@ import time
 os.makedirs("styles", exist_ok=True)
 
 # Load trained YOLO model
-model_dir = "runs/detect/train11/weights/best.pt"  # Change this to your model path
+model_dir = "runs/detect/train12/weights/best.pt"  # Change this to your model path
 model = YOLO(model_dir)
 
 # Define waste categories and their reasoning
