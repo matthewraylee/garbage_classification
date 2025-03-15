@@ -1,0 +1,402 @@
+
+    /* Global Styles */
+    :root {
+        --compost-color: rgb(0, 180, 0);
+        --recyclable-color: rgb(0, 0, 255);
+        --garbage-color: rgb(255, 0, 0);
+        --background-color: #f5f7fa;
+        --card-background: white;
+        --text-color: #333;
+        --border-radius: 8px;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    /* Container and Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .app-title {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2d3748;
+        font-size: 32px;
+    }
+
+    /* Legend Styling */
+    .legend {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        padding: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    .legend-color {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 4px;
+    }
+
+    .compost-color {
+        background-color: var(--compost-color);
+    }
+
+    .recyclable-color {
+        background-color: var(--recyclable-color);
+    }
+
+    .garbage-color {
+        background-color: var(--garbage-color);
+    }
+
+    /* Webcam Container Styling */
+    .webcam-container {
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+        height: 480px;
+    }
+
+    /* Fix webcam input styling */
+    .webcam-input {
+        height: 100% !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .webcam-input > div {
+        height: 100% !important;
+    }
+
+    /* Style the webcam button */
+    .webcam-input button {
+        position: absolute !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        z-index: 1000 !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        color: white !important;
+        border-radius: 50% !important;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 24px !important;
+        border: 2px solid white !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .webcam-input button:hover {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        transform: scale(1.05) !important;
+    }
+
+    /* Style the webcam placeholder */
+    .webcam-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #718096;
+    }
+
+    .webcam-placeholder img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 16px;
+        opacity: 0.7;
+    }
+
+    .webcam-placeholder p {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .webcam-title, .results-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #4a5568;
+    }
+
+    /* Results Styling */
+    .results-output {
+        height: 480px;
+        overflow-y: auto;
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        padding: 15px;
+        box-shadow: var(--shadow);
+    }
+
+    .no-detections {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #718096;
+    }
+
+    .empty-state {
+        text-align: center;
+    }
+
+    .empty-icon {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .empty-message {
+        font-size: 16px;
+    }
+
+    .summary-section, .details-section {
+        margin-bottom: 20px;
+    }
+
+    .summary-section h3, .details-section h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #4a5568;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 5px;
+    }
+
+    .category-counts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .category-label {
+        display: flex;
+        align-items: center;
+        width: 120px;
+        font-weight: bold;
+    }
+
+    .category-icon {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        border-radius: 50%;
+    }
+
+    .category-compost .category-icon {
+        background-color: var(--compost-color);
+    }
+
+    .category-recyclable .category-icon {
+        background-color: var(--recyclable-color);
+    }
+
+    .category-garbage .category-icon {
+        background-color: var(--garbage-color);
+    }
+
+    .category-bar-container {
+        flex: 1;
+        height: 20px;
+        background-color: #edf2f7;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .category-bar {
+        height: 100%;
+        transition: width 0.3s ease;
+    }
+
+    .category-compost-bg {
+        background-color: var(--compost-color);
+    }
+
+    .category-recyclable-bg {
+        background-color: var(--recyclable-color);
+    }
+
+    .category-garbage-bg {
+        background-color: var(--garbage-color);
+    }
+
+    .category-count {
+        position: absolute;
+        right: 10px;
+        color: #2d3748;
+        font-weight: bold;
+    }
+
+    .items-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detection-item {
+        background-color: #f8fafc;
+        border-radius: var(--border-radius);
+        padding: 12px;
+        border-left: 5px solid #cbd5e0;
+    }
+
+    .category-compost {
+        border-left-color: var(--compost-color);
+    }
+
+    .category-recyclable {
+        border-left-color: var(--recyclable-color);
+    }
+
+    .category-garbage {
+        border-left-color: var(--garbage-color);
+    }
+
+    .detection-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .item-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .item-number {
+        background-color: #e2e8f0;
+        color: #4a5568;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .item-label {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .item-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .item-category {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 12px;
+        color: white;
+    }
+
+    .category-compost .item-category {
+        background-color: var(--compost-color);
+    }
+
+    .category-recyclable .item-category {
+        background-color: var(--recyclable-color);
+    }
+
+    .category-garbage .item-category {
+        background-color: var(--garbage-color);
+    }
+
+    .item-confidence {
+        font-size: 12px;
+        color: #718096;
+    }
+
+    .detection-reasoning {
+        font-size: 14px;
+        color: #4a5568;
+        line-height: 1.4;
+    }
+
+    /* How it works section */
+    .how-it-works {
+        margin-top: 30px;
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+    }
+
+    .how-it-works h2 {
+        color: #2d3748;
+        margin-bottom: 15px;
+    }
+
+    .how-it-works ul {
+        margin-left: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #718096;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .legend {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .legend-item {
+            margin: 5px 0;
+        }
+        
+        .detection-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .item-meta {
+            margin-top: 5px;
+        }
+    }
+    

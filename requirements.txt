@@ -1,0 +1,17 @@
+# Core ML dependencies
+ultralytics==8.3.70
+opencv-python-headless==4.10.0.84
+pillow==10.4.0
+
+# UI dependencies
+gradio==3.50.2
+
+# Additional dependencies
+numpy>=1.22.0
+pydantic<2.0.0
+fastapi<0.100.0
+starlette<0.28.0
+
+# Optional - only if you need these in your deployment
+tensorflow>=2.10.0
+roboflow>=1.1.53
