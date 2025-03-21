@@ -36,6 +36,7 @@ yolo train data=YOLO-Waste-Detection-2/data.yaml model=yolov8n.pt epochs=10 cfg=
 yolo train data=coco8.yaml model=yolo11n.pt epochs=10 lr0=0.01
 yolo train data=YOLO-Waste-Detection-2\data.yaml model=yolov8n.pt batch=16 epochs=50 imgsz=640 patience=5 cfg=hyp.yaml
 yolo train data=YOLO-Waste-Detection-2\data.yaml model=yolov8n.pt batch=16 epochs=50 imgsz=640 patience=5 cfg=hyp.yaml
+yolo train data=YOLO-Waste-Detection-2\data.yaml model=yolov8n.pt batch=16 epochs=50 imgsz=640 patience=5 lr0=0.01 lrf=0.01 momentum=0.937 weight_decay=0.0005 hsv_h=0.015 hsv_s=0.7 hsv_v=0.4 translate=0.1 scale=0.5 fliplr=0.5 mosaic=1.0 mixup=0.1
 
 # test model
 
