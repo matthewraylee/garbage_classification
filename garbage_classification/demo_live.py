@@ -811,8 +811,8 @@ if __name__ == "__main__":
         print(f"CSS file will be created at: {css_path}")
     
     demo = create_ui()
-    # demo.launch(share=True)  # Set share=True to create a public link
-    demo.launch(share=True, server_name="0.0.0.0", server_port=7860)
+    demo.launch(share=True)  # Set share=True to create a public link
+    # demo.launch(share=True, server_port=7860)
 
     
     print("Application started successfully!")
